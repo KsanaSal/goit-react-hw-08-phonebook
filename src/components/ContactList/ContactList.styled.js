@@ -5,19 +5,21 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  font-size: 36px;
+  font-size: 24px;
 `;
 export const Button = styled.button`
-  border: 2px solid #b1b1b2;
+  border: 2px solid #cb52fb;
   border-radius: 4px;
   background-color: #fff;
-  font-size: 24px;
-  padding: 4px 8px;
+  font-size: 18px;
+  padding: 8px 12px;
   margin-top: 20px;
   box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1);
+  background-color: rgba(58, 255, 233, 0.5);
+
   &:hover {
-    background-color: #0442dc;
-    color: #fff;
+    color: #3affe9;
+    background-color: #cb52fb;
   }
 `;
 export const ListItemWrapper = styled.div`

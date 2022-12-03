@@ -7,7 +7,8 @@ export const Field = styled(FormikField)`
   padding: 4px;
   margin-top: 10px;
   outline: none;
-  border: 2px solid #b1b1b2;
+  border: 2px solid #cb52fb;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 4px;
   min-height: 30px;
   width: 250px;
@@ -25,7 +26,9 @@ export const Form = styled(FormikForm)`
   display: flex;
   flex-direction: column;
   gap: 4px;
-  border: 1px solid #010101;
+  background-color: rgba(203, 82, 251, 0.3);
+  box-shadow: 5px 7px 9px rgba(86, 33, 110, 0.3);
+  border: 2px solid #cb52fb;
   border-radius: 8px;
   width: 550px;
   min-height: 150px;
@@ -33,7 +36,7 @@ export const Form = styled(FormikForm)`
 `;
 
 export const Label = styled.label`
-  font-size: 36px;
+  font-size: 24px;
 
   &:not(:first-child) {
     margin-top: 20px;
@@ -41,16 +44,17 @@ export const Label = styled.label`
 `;
 
 export const Button = styled.button`
-width: 150px;
-border: 2px solid #b1b1b2;
-border-radius: 4px;
-background-color: #fff;
-font-size: 24px;
-padding: 4px;
-margin-top: 20px;
-box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1);
-&:hover{
-    background-color: #0442DC;
-    color: #fff;
-}
-`
+  width: 150px;
+  border: 2px solid #cb52fb;
+  border-radius: 4px;
+  font-size: 18px;
+  padding: 8px 12px;
+  margin-top: 20px;
+  box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1);
+  background-color: rgba(58, 255, 233, 0.5);
+
+  &:hover {
+    color: #3affe9;
+    background-color: #cb52fb;
+  }
+`;

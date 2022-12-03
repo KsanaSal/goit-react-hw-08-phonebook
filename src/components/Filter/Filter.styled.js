@@ -1,21 +1,27 @@
 import styled from 'styled-components';
 
 export const Span = styled.span`
-font-size: 36px;
-`
+  font-size: 24px;
+`;
 
 export const FilterInput = styled.div`
-display: flex;
-flex-direction: column;
-`
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 2px solid #cb52fb;
+  background-color: rgba(203, 82, 251, 0.3);
+  box-shadow: 5px 7px 9px rgba(86, 33, 110, 0.3);
+  border-radius: 8px;
+  min-width: 550px;
+`;
 
 export const Input = styled.input`
-color: #010101;
-  background-color: #fff;
+  color: #010101;
   padding: 4px;
   margin-top: 10px;
   outline: none;
-  border: 2px solid #b1b1b2;
+  border: 2px solid #cb52fb;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 4px;
   min-height: 30px;
   width: 250px;
@@ -27,4 +33,4 @@ color: #010101;
     box-shadow: 0 0 10px #80a3f9;
     background-color: #fff;
   }
-`
+`;
