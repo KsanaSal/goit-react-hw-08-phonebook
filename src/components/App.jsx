@@ -2,16 +2,10 @@ import { useDispatch } from 'react-redux';
 import { lazy, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout';
-// import { fetchContacts } from 'redux/operations';
 import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
 import { useAuth } from 'hooks/useAuth';
 import { refreshUser } from 'redux/auth/operations';
-// import { Contacts } from 'pages/Contacts';
-// import { ContactForm } from './ContactForm/ContactForm';
-// import { ContactList } from './ContactList/ContactList';
-// import { Filter } from './Filter/Filter';
-// import { selectError, selectIsLoading } from 'redux/selector';
 
 const HomePage = lazy(() => import('../pages/Home'));
 const RegisterPage = lazy(() => import('../pages/Register'));
@@ -25,13 +19,6 @@ export const App = () => {
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
-  // const dispatch = useDispatch();
-  // const isLoading = useSelector(selectIsLoading);
-  // const error = useSelector(selectError);
-
-  // useEffect(() => {
-  //   dispatch(fetchContacts());
-  // }, [dispatch]);
 
   return isRefreshing ? (
     <b>Refreshing user...</b>
