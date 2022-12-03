@@ -10,6 +10,7 @@ export const StyledLink = styled(NavLink)`
   color: #2a363b;
 
   &.active {
-    color: #e84a5f;
+    color: #cb52fb;
+    text-decoration: underline;
   }
 `;
