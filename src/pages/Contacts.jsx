@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchContacts } from 'redux/operations';
+import { fetchContacts } from 'redux/contacts/operations';
 // import { ContactForm } from './ContactForm/ContactForm';
 import { ContactList } from 'components/ContactList/ContactList';
 import { Filter } from 'components/Filter/Filter';
-import { selectError, selectIsLoading } from 'redux/selector';
+import { selectError, selectIsLoading } from 'redux/contacts/selector';
 import { ContactForm } from 'components/ContactForm/ContactForm';
 
 export default function Contacts() {

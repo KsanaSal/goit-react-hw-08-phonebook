@@ -1,7 +1,7 @@
 import { Formik } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/operations';
-import { selectContacts } from 'redux/selector';
+import { addContact } from 'redux/contacts/operations';
+import { selectContacts } from 'redux/contacts/selector';
 import { Field, Form, Label, Button } from './ContactForm.styled';
 
 export const ContactForm = () => {
@@ -17,7 +17,7 @@ export const ContactForm = () => {
           .includes(value.name.toLocaleLowerCase()))
     );
     if (isDuplicate) {
-      const contact = { name: value.name, phone: value.number };
+      const contact = { name: value.name, number: value.number };
       dispatch(addContact(contact));
       resetForm();
     } else {
