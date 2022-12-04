@@ -5,7 +5,8 @@ export const Header = styled.header`
   width: 95%;
   top: 0;
   z-index: 1;
-  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
   align-items: center;
