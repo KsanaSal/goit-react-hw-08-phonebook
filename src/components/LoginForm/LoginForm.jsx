@@ -34,7 +34,7 @@ export const LoginForm = () => {
       </Label>
       <Button type="submit">
         {isLoading ? (
-          <CircularProgress sx={{ color: '#3affe9' }} size={24} />
+          <CircularProgress sx={{ color: '#770e7e' }} size={24} />
         ) : (
           <LoginIcon />
         )}
