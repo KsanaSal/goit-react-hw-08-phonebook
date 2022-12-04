@@ -3,7 +3,7 @@ import { Field as FormikField, Form as FormikForm } from 'formik';
 
 export const Field = styled(FormikField)`
   color: #010101;
-  background-color: #fff;
+  /* background-color: #fff; */
   padding: 4px;
   margin-top: 10px;
   outline: none;
@@ -12,7 +12,7 @@ export const Field = styled(FormikField)`
   border-radius: 4px;
   min-height: 30px;
   width: 250px;
-  font-size: 24px;
+  font-size: 18px;
 
   &:focus {
     outline: none;

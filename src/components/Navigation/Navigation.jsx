@@ -1,13 +1,17 @@
 import { useAuth } from 'hooks/useAuth';
-import { StyledLink } from './Navigation.styled.js';
+import HomeIcon from '@mui/icons-material/Home';
+import { Nav, StyledLink } from './Navigation.styled.js';
 
 export const Navigation = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <nav>
-      <StyledLink to="/">Home</StyledLink>
+    <Nav>
+      <StyledLink to="/">
+        <HomeIcon />
+        Home
+      </StyledLink>
       {isLoggedIn && <StyledLink to="/contacts">Contacts</StyledLink>}
-    </nav>
+    </Nav>
   );
 };

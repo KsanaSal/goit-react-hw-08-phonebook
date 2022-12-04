@@ -6,12 +6,18 @@ export const Wrapper = styled.div`
   gap: 12px;
 `;
 
-export const Title = styled.p`
+export const Title = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-weight: 700;
   font-size: 18px;
 `;
 
 export const Button = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 18px;
   padding: 4px 8px;
   border-radius: 4px;

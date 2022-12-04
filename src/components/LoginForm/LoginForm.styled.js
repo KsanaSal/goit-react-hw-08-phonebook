@@ -33,6 +33,9 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 18px;
   padding: 8px 12px;
   border-radius: 4px;

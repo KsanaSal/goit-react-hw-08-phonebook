@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
-// import css from './LoginForm.module.css';
+import LoginIcon from '@mui/icons-material/Login';
 import { Button, Form, Input, Label } from './LoginForm.styled';
 
 export const LoginForm = () => {
@@ -28,7 +28,10 @@ export const LoginForm = () => {
         Password
         <Input type="password" name="password" />
       </Label>
-      <Button type="submit">Log In</Button>
+      <Button type="submit">
+        <LoginIcon />
+        Log In
+      </Button>
     </Form>
   );
 };

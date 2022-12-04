@@ -25,7 +25,7 @@ export const Input = styled.input`
   border-radius: 4px;
   min-height: 30px;
   width: 250px;
-  font-size: 24px;
+  font-size: 18px;
 
   &:focus {
     outline: none;

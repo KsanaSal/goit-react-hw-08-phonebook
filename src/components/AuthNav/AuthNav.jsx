@@ -1,10 +1,18 @@
-import { StyledLink } from './AuthNav.styled';
+import { StyledLink, Wrap } from './AuthNav.styled';
+import HowToRegIcon from '@mui/icons-material/HowToReg';
+import LoginIcon from '@mui/icons-material/Login';
 
 export const AuthNav = () => {
   return (
-    <div>
-      <StyledLink to="/register">Register</StyledLink>
-      <StyledLink to="/login">Log In</StyledLink>
-    </div>
+    <Wrap>
+      <StyledLink to="/register">
+        <HowToRegIcon />
+        Register
+      </StyledLink>
+      <StyledLink to="/login">
+        <LoginIcon />
+        Log In
+      </StyledLink>
+    </Wrap>
   );
 };

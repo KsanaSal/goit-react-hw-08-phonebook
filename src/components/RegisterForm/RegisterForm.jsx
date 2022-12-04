@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
-// import css from './RegisterForm.module.css';
+import HowToRegIcon from '@mui/icons-material/HowToReg';
 import { Button, Form, Input, Label } from './RegisterForm.styled';
 
 export const RegisterForm = () => {
@@ -33,7 +33,10 @@ export const RegisterForm = () => {
         Password
         <Input type="password" name="password" />
       </Label>
-      <Button type="submit">Register</Button>
+      <Button type="submit">
+        <HowToRegIcon />
+        Register
+      </Button>
     </Form>
   );
 };

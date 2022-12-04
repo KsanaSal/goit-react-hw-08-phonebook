@@ -12,22 +12,25 @@ export const ContactList = () => {
   );
 
   return (
-    <List>
-      {filteredList.map(contact => {
-        return (
-          <ListItem key={contact.id}>
-            <ListItemWrapper>
-              {contact.name}: {contact.number}
-              <Button
-                type="button"
-                onClick={() => dispatch(deleteContact(contact.id))}
-              >
-                Delete
-              </Button>
-            </ListItemWrapper>
-          </ListItem>
-        );
-      })}
-    </List>
+    <>
+      <List>
+        {filteredList.map(contact => {
+          return (
+            <ListItem key={contact.id}>
+              <ListItemWrapper>
+                {contact.name}: {contact.number}
+                <Button
+                  type="button"
+                  onClick={() => dispatch(deleteContact(contact.id))}
+                >
+                  Delete
+                </Button>
+              </ListItemWrapper>
+            </ListItem>
+          );
+        })}
+      </List>
+      
+    </>
   );
 };

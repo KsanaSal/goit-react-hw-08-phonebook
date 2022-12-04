@@ -10,7 +10,6 @@ export const ListItem = styled.li`
 export const Button = styled.button`
   border: 2px solid #cb52fb;
   border-radius: 4px;
-  background-color: #fff;
   font-size: 18px;
   padding: 8px 12px;
   margin-top: 20px;
