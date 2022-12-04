@@ -8,6 +8,7 @@ export const Span = styled.span`
 export const FilterInput = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
   padding: 10px;
   border: 2px solid #cb52fb;
   background-color: rgba(203, 82, 251, 0.3);

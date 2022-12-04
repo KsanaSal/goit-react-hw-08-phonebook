@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchContacts } from 'redux/contacts/operations';
+import CircularProgress from '@mui/material/CircularProgress';
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 import ImportContactsIcon from '@mui/icons-material/ImportContacts';
 import { ContactList } from 'components/ContactList/ContactList';
@@ -20,7 +21,6 @@ export default function Contacts() {
   return (
     <div
       style={{
-        // height: '100vh',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -56,7 +56,10 @@ export default function Contacts() {
         Contacts
       </h2>
       <Filter />
-      {isLoading && !error && <b>Request in progress...</b>}
+      {isLoading && !error && (
+        <CircularProgress sx={{ color: '#770e7e' }} size={24} />
+      )}
+
       <ContactList />
     </div>
   );

@@ -2,27 +2,31 @@ import { Formik } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contacts/operations';
 import AddIcCallIcon from '@mui/icons-material/AddIcCall';
-import { selectContacts } from 'redux/contacts/selector';
+import CircularProgress from '@mui/material/CircularProgress';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { selectContacts, selectIsLoading } from 'redux/contacts/selector';
 import { Field, Form, Label, Button } from './ContactForm.styled';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
-  const handleSubmit = (value, { resetForm }) => {
-    let isDuplicate = true;
+  const isLoading = useSelector(selectIsLoading);
 
-    contacts.map(
-      item =>
-        (isDuplicate = !item.name
-          .toLocaleLowerCase()
-          .includes(value.name.toLocaleLowerCase()))
+  const handleSubmit = (value, { resetForm }) => {
+    console.log(isLoading);
+    let isDuplicate = false;
+
+    const filteredContacts = contacts.filter(
+      item => item.name.toLocaleLowerCase() === value.name.toLocaleLowerCase()
     );
+    isDuplicate = filteredContacts.length === 0;
+    console.log(filteredContacts.length > 0);
     if (isDuplicate) {
       const contact = { name: value.name, number: value.number };
       dispatch(addContact(contact));
       resetForm();
     } else {
-      alert(`${value.name} is already in contacts`);
+      Notify.failure(`${value.name} is already in contacts`);
     }
   };
 
@@ -59,8 +63,12 @@ export const ContactForm = () => {
           />
 
           <Button type="submit">
-            <AddIcCallIcon />
-            Add contact
+            {isLoading ? (
+              <CircularProgress sx={{ color: '#3affe9' }} size={24} />
+            ) : (
+              <AddIcCallIcon />
+            )}
+            Add contact{console.log(isLoading)}
           </Button>
         </Form>
       </Formik>
