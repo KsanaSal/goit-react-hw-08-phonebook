@@ -1,6 +1,7 @@
 import { Formik } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contacts/operations';
+import AddIcCallIcon from '@mui/icons-material/AddIcCall';
 import { selectContacts } from 'redux/contacts/selector';
 import { Field, Form, Label, Button } from './ContactForm.styled';
 
@@ -57,7 +58,10 @@ export const ContactForm = () => {
             required
           />
 
-          <Button type="submit">Add contact</Button>
+          <Button type="submit">
+            <AddIcCallIcon />
+            Add contact
+          </Button>
         </Form>
       </Formik>
     </div>

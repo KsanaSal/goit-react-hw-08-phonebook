@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Span = styled.span`
+  margin-bottom: 10px;
   font-size: 24px;
 `;
 
@@ -18,7 +19,7 @@ export const FilterInput = styled.div`
 export const Input = styled.input`
   color: #010101;
   padding: 4px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   outline: none;
   border: 2px solid #cb52fb;
   background-color: rgba(255, 255, 255, 0.8);
@@ -33,4 +34,10 @@ export const Input = styled.input`
     box-shadow: 0 0 10px #80a3f9;
     background-color: #fff;
   }
+`;
+
+export const WrapFilter = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
 `;

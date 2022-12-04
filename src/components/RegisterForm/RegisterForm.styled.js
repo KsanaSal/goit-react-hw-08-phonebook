@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
 export const Form = styled.form`
-  /* display: grid; */
   width: 320px;
-  margin: 50px auto;
+  margin: 100px auto;
   padding: 24px 20px;
   background-color: rgba(203, 82, 251, 0.3);
   box-shadow: 5px 7px 9px rgba(86, 33, 110, 0.3);

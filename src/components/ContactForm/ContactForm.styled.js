@@ -3,7 +3,6 @@ import { Field as FormikField, Form as FormikForm } from 'formik';
 
 export const Field = styled(FormikField)`
   color: #010101;
-  /* background-color: #fff; */
   padding: 4px;
   margin-top: 10px;
   outline: none;
@@ -44,7 +43,11 @@ export const Label = styled.label`
 `;
 
 export const Button = styled.button`
-  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  max-width: 170px;
   border: 2px solid #cb52fb;
   border-radius: 4px;
   font-size: 18px;

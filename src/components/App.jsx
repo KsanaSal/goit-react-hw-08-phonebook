@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { lazy, useEffect } from 'react';
+import CircularProgress from '@mui/material/CircularProgress';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout';
 import { PrivateRoute } from './PrivateRoute';
@@ -21,7 +22,10 @@ export const App = () => {
   }, [dispatch]);
 
   return isRefreshing ? (
-    <b>Refreshing user...</b>
+    <CircularProgress
+      sx={{ top: '25%', left: '50%', position: 'absolute', color: '#3affe9' }}
+      size={70}
+    />
   ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
