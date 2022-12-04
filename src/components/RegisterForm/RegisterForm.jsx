@@ -1,13 +1,17 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
+import CircularProgress from '@mui/material/CircularProgress';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import { Button, Form, Input, Label } from './RegisterForm.styled';
+import { useAuth } from 'hooks';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
+  const { isLoading } = useAuth();
 
   const handleSubmit = e => {
     e.preventDefault();
+
     const form = e.currentTarget;
     dispatch(
       register({
@@ -34,8 +38,12 @@ export const RegisterForm = () => {
         <Input type="password" name="password" />
       </Label>
       <Button type="submit">
-        <HowToRegIcon />
-        Register
+        {isLoading ? (
+          <CircularProgress sx={{ color: '#3affe9' }} size={24} />
+        ) : (
+          <HowToRegIcon />
+        )}
+        Register{console.log('sdfgf', isLoading)}
       </Button>
     </Form>
   );

@@ -1,13 +1,17 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
 import LoginIcon from '@mui/icons-material/Login';
+import CircularProgress from '@mui/material/CircularProgress';
 import { Button, Form, Input, Label } from './LoginForm.styled';
+import { useAuth } from 'hooks';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
+  const { isLoading } = useAuth();
 
   const handleSubmit = e => {
     e.preventDefault();
+
     const form = e.currentTarget;
     dispatch(
       logIn({
@@ -29,7 +33,11 @@ export const LoginForm = () => {
         <Input type="password" name="password" />
       </Label>
       <Button type="submit">
-        <LoginIcon />
+        {isLoading ? (
+          <CircularProgress sx={{ color: '#3affe9' }} size={24} />
+        ) : (
+          <LoginIcon />
+        )}
         Log In
       </Button>
     </Form>
