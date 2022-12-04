@@ -43,7 +43,7 @@ export const RegisterForm = () => {
         ) : (
           <HowToRegIcon />
         )}
-        Register{console.log('sdfgf', isLoading)}
+        Register
       </Button>
     </Form>
   );

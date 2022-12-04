@@ -13,14 +13,12 @@ export const ContactForm = () => {
   const isLoading = useSelector(selectIsLoading);
 
   const handleSubmit = (value, { resetForm }) => {
-    console.log(isLoading);
     let isDuplicate = false;
 
     const filteredContacts = contacts.filter(
       item => item.name.toLocaleLowerCase() === value.name.toLocaleLowerCase()
     );
     isDuplicate = filteredContacts.length === 0;
-    console.log(filteredContacts.length > 0);
     if (isDuplicate) {
       const contact = { name: value.name, number: value.number };
       dispatch(addContact(contact));
@@ -68,7 +66,7 @@ export const ContactForm = () => {
             ) : (
               <AddIcCallIcon />
             )}
-            Add contact{console.log(isLoading)}
+            Add contact
           </Button>
         </Form>
       </Formik>

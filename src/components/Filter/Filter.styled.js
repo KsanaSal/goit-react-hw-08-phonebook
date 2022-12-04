@@ -20,7 +20,6 @@ export const FilterInput = styled.div`
 export const Input = styled.input`
   color: #010101;
   padding: 4px;
-  /* margin-top: 10px; */
   outline: none;
   border: 2px solid #cb52fb;
   background-color: rgba(255, 255, 255, 0.8);
