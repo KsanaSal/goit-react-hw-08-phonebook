@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import SearchIcon from '@mui/icons-material/Search';
-import { setFilter } from 'redux/contacts/filterSlice';
+import { setFilter } from 'redux/filter/filterSlice';
 import { selectFilter } from 'redux/contacts/selector';
 import { Span, FilterInput, Input, WrapFilter } from './Filter.styled';
 
